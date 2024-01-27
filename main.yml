@@ -1,0 +1,15 @@
+- hosts: localhost
+  connection: local
+  vars:
+    resource_group: RG10
+#    vmss_name: "{{resource_group}}VMSS01"
+#    vmss_lb_name: "{{ vmss_name }}lb"
+    location: westindia
+#    admin_username: tadmin
+#    #admin_password: "your_password"
+#    admin_password: "PL@net01"
+  tasks:
+    - name: Create a resource group
+      azure_rm_resourcegroup:
+        name: RG-TBOX01
+        location: "{{ location }}"
