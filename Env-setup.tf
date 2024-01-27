@@ -6,7 +6,7 @@ resource "azurerm_resource_group" "RG01" {
 
 resource "azurerm_linux_virtual_machine" "RG01" {
   count                 = 4
-  name                = "UBVM${count.index}"
+  name                = "RG01-VM0${count.index}"
   resource_group_name = azurerm_resource_group.RG01.name
   location            = azurerm_resource_group.RG01.location
 
@@ -21,7 +21,7 @@ resource "azurerm_linux_virtual_machine" "RG01" {
   }
 
   os_disk {
-    name              = "UBVMDISK${count.index}"
+    name              = "RG01-VMDSK0${count.index}"
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
   }

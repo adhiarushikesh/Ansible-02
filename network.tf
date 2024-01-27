@@ -50,7 +50,7 @@ resource "azurerm_network_security_group" "RG01" {
     destination_address_prefix = "*"
   }
   security_rule {
-    name                       = "Public Out"
+    name                       = "PublicOut"
     priority                   = 1002
     direction                  = "Outbound"
     access                     = "Allow"
