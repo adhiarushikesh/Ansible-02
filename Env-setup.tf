@@ -35,7 +35,3 @@ resource "azurerm_linux_virtual_machine" "RG01" {
 }
 
 
-output "resource_group_name" {
-  value = azurerm_resource_group.RG01.name
-}
-
